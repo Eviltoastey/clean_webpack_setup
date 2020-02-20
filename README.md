@@ -1,11 +1,11 @@
-*Steps to init project*
+**Steps to init project**
 
--- go to project
+1. go to project
 
--- npm run build
+2. npm run build
 
--- npm start
+3. npm start
 
-then open another terminal window in the same dir and run:
+**then open another terminal window in the same dir and run:**
 
--- tsc -w
+1. tsc -w
