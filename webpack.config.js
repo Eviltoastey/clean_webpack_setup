@@ -1,10 +1,17 @@
 const path = require('path');
-console.log(path.resolve(__dirname + 'dist'));
+
+const {
+    NODE_ENV = 'production',
+  } = process.env;
+  
 module.exports = {
     entry: './src/app.ts',
+    mode: NODE_ENV,
+    target: 'node',
     output: {
         filename: 'app.js',
-        path: path.resolve(__dirname + '/dist')
+        path: path.resolve(__dirname + '/dist'),
+        publicPath: 'dist' 
     },
     devtool: 'inline-source-map',
     module: {
@@ -17,6 +24,6 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts', '.js']
+        extensions: ['.ts', '.js'],
     }
-};
+}
